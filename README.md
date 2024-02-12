@@ -11,7 +11,7 @@ This program processes a cookie log file and finds the most active cookies for a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/anaydilipnaik/quantcast-assessment.git
+   git clone https://github.com/your-username/your-repository.git
    ```
 
 2. Navigate to the project folder:
@@ -45,3 +45,11 @@ To find the most active cookies, follow these steps:
    ```bash
    node most_active_cookie.js cookie_log.csv -d 2018-12-09
    ```
+
+## Running Tests
+
+To run the tests, use the following command:
+
+```bash
+npm test
+```
