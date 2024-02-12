@@ -1,0 +1,23 @@
+{
+  "name": "quantcast-assessment",
+  "version": "1.0.0",
+  "description": "This program processes a cookie log file and finds the most active cookies for a specified date.",
+  "main": "most_active_cookie.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaydilipnaik/quantcast-assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anaydilipnaik/quantcast-assessment/issues"
+  },
+  "homepage": "https://github.com/anaydilipnaik/quantcast-assessment#readme",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0"
+  }
+}
