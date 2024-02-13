@@ -2,7 +2,7 @@
   "name": "quantcast-assessment",
   "version": "1.0.0",
   "description": "This program processes a cookie log file and finds the most active cookies for a specified date.",
-  "main": "most_active_cookie.js",
+  "main": "cli.js",
   "type": "module",
   "scripts": {
     "test": "mocha most_active_cookie.test.js"

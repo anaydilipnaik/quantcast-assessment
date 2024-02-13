@@ -3,8 +3,8 @@ import {
   readLogFile,
   extractDateFromTimestamp,
   updateCookieCount,
-  // processLogFile,
-} from "./most_active_cookie.js";
+  processLogFile,
+} from "./main.js";
 
 describe("most_active_cookie.js", () => {
   describe("readLogFile", () => {
@@ -30,6 +30,31 @@ describe("most_active_cookie.js", () => {
       updateCookieCount(cookieCount, "cookie1");
       expect(cookieCount.get("cookie1")).to.equal(2);
       expect(cookieCount.get("cookie2")).to.equal(1);
+    });
+  });
+
+  describe("processLogFile", () => {
+    it("should process the log file and identify the most active cookie", async () => {
+      const filePath = "cookie_log.csv";
+      const date = "2018-12-09";
+
+      const originalConsoleLog = console.log;
+      const capturedOutput = [];
+
+      // Replace console.log with a function that captures output
+      console.log = (...args) => capturedOutput.push(args.join(" "));
+
+      await new Promise((resolve) => {
+        processLogFile(filePath, date);
+        // Resolve after some time (adjust as needed based on the actual async operations)
+        setTimeout(resolve, 1000);
+      });
+
+      // Restore the original console.log
+      console.log = originalConsoleLog;
+
+      // Assert captured output
+      expect(capturedOutput).to.include("AtY0laUfhglK3lC7");
     });
   });
 });
