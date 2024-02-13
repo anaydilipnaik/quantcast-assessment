@@ -28,7 +28,7 @@ This program processes a cookie log file and finds the most active cookies for a
 
 ## Running the Program
 
-TLDR: The starting point of the application is cli.js, where command line arguments are passed and the appropriate method from main.js is invoked by passing the filePath and date parameters
+TLDR: The starting point of the application is cli.js, where command line arguments are parsed and the appropriate method from main.js is invoked by passing the filePath and date parameters
 
 To find the most active cookies, follow these steps:
 
