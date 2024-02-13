@@ -1,7 +1,7 @@
-const fs = require("fs");
-const readline = require("readline");
+import fs from "fs";
+import readline from "readline";
 
-const readLogFile = (filePath) => {
+export const readLogFile = (filePath) => {
   try {
     const fileStream = fs.createReadStream(filePath);
     return readline.createInterface({
@@ -14,7 +14,7 @@ const readLogFile = (filePath) => {
   }
 };
 
-const extractDateFromTimestamp = (timestamp) => {
+export const extractDateFromTimestamp = (timestamp) => {
   try {
     return new Date(timestamp).toISOString().split("T")[0];
   } catch (error) {
@@ -23,12 +23,12 @@ const extractDateFromTimestamp = (timestamp) => {
   }
 };
 
-const updateCookieCount = (cookieCount, cookie) => {
+export const updateCookieCount = (cookieCount, cookie) => {
   cookieCount.set(cookie, (cookieCount.get(cookie) || 0) + 1);
 };
 
 // Process the log file using modular functions
-const processLogFile = (filePath, date) => {
+export const processLogFile = (filePath, date) => {
   const cookieCount = new Map();
   const rl = readLogFile(filePath);
 
@@ -52,16 +52,16 @@ const processLogFile = (filePath, date) => {
 };
 
 // Retrieve command line arguments
-const args = process.argv.slice(2);
+// const args = process.argv.slice(2);
 
-const filePath = args[0];
-const date = args[2];
+// const filePath = args[0];
+// const date = args[2];
 
-// Check if required arguments are provided
-if (!filePath || !date) {
-  console.error("Usage: node most_active_cookie.js <file_path> -d <date>");
-  process.exit(1);
-}
+// // Check if required arguments are provided
+// if (!filePath || !date) {
+//   console.error("Usage: node most_active_cookie.js <file_path> -d <date>");
+//   process.exit(1);
+// }
 
-// Process the log file
-processLogFile(filePath, date);
+// // Process the log file
+// processLogFile(filePath, date);

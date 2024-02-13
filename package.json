@@ -5,7 +5,7 @@
   "main": "most_active_cookie.js",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha most_active_cookie.test.js"
   },
   "repository": {
     "type": "git",
