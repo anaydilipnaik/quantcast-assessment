@@ -17,7 +17,7 @@ This program processes a cookie log file and finds the most active cookies for a
 2. Navigate to the project folder:
 
    ```bash
-   cd your-repository
+   cd quantcast-assessment
    ```
 
 3. Install dependencies (if any):
@@ -28,6 +28,8 @@ This program processes a cookie log file and finds the most active cookies for a
 
 ## Running the Program
 
+TLDR: The starting point of the application is cli.js, where command line arguments are passed and the appropriate method from main.js is invoked by passing the filePath and date parameters
+
 To find the most active cookies, follow these steps:
 
 1. Open a terminal and navigate to the project folder.
@@ -35,15 +37,15 @@ To find the most active cookies, follow these steps:
 2. Run the following command:
 
    ```bash
-   node most_active_cookie.js <file_path> -d <date>
+   node cli.js <file_path> -d <date>
    ```
 
-   Replace `<file_path>` with the path to your cookie log file, and `<date>` with the date for which you want to find the most active cookies.
+   Replace `<file_path>` with the path to your cookie log file (cookie_log.csv), and `<date>` with the date for which you want to find the most active cookies.
 
    Example:
 
    ```bash
-   node most_active_cookie.js cookie_log.csv -d 2018-12-09
+   node cli.js cookie_log.csv -d 2018-12-09
    ```
 
 ## Running Tests
